@@ -9,7 +9,16 @@ jobs:
       - name: List of files
         run: |
           pwd
-          ls
+          ls -a
+          # to show the commit
+          echo $GITHUB_SHA 
+          # to view the repository
+          echo $GITHUB_REPOSITORY
+          # to view the directory
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          # git clone git@github:$GITHUB_REPOSITORY
+          # git checkout $GITHUB_SHA
       - name: Checkout
         uses: actions/checkout@v1
       - name: List files after checkout
