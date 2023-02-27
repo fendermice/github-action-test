@@ -17,3 +17,8 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+  runs-powershell-command:
+    runs-on: windows-latest
+    steps:
+      - name: directory powershell
+        run: Get-Location
