@@ -19,6 +19,7 @@ jobs:
         shell: python
   runs-powershell-command:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: directory powershell
         run: Get-Location
