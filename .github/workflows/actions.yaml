@@ -41,3 +41,8 @@ jobs:
           who-to-greet: Ako2
       - name: Log greeting time
         run: echo "${{ steps.greet.outputs.time }}"
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
